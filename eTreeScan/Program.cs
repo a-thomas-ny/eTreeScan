@@ -74,6 +74,7 @@ namespace eTreeScan
                     string fExtention = Path.GetExtension(f);
                     if (fExtention != ".db" && fExtention != ".ini" && fExtention != ".DS_Store" && fExtention != ".cfg" && fExtention != ".san" && fExtention != ".time" && fExtention != "._")
                     {
+                        //change the file-action here. Available options : index / copy-file / move
                         eXMLNode = "<asset file-action=\"index\" file-name=\"" + fileName + "\" file-path=\"" + filePath + "\" ingest-action=\"create-new-asset\"><custom-metadata set-standard-id=\"" + sMetadataSet + "\"/>";
                         if (!(String.IsNullOrEmpty(categorypath)))
                             eXMLNode = eXMLNode + "<categories><category name=\"" + categorypath + "\"/></categories>";
